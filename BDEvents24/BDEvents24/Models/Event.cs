@@ -12,7 +12,6 @@ namespace BDEvents24.Models
         public string Description { get; set; }
         public DateTime Date { get; set; }
         public string Place { get; set; }
-        public string Description { get; set; }
         public string ContactPhone { get; set; }
         public string ContactEmail { get; set; }
         public int EventCategoryId { get; set; }

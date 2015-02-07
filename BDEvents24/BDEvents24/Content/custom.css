@@ -1,0 +1,99 @@
+﻿body {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 16px;
+    font-family: 'Ubuntu';
+}
+
+.center {
+    margin: auto;
+    float: none;
+}
+
+.top-bottom-padding {
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #061D4F !important;
+}
+
+.navbar-nav > li > a {
+    color: #B0ABAB !important;
+}
+
+    .navbar-nav > li > a:hover {
+        color: white !important;
+    }
+
+.navbar-brand {
+    color: #B0ABAB !important;
+    font-size: 30px;
+}
+
+    .navbar-brand:hover {
+        color: white !important;
+    }
+
+.thumbnail > img {
+    width: 100% !important;
+    height: 280px !important;
+}
+
+.footer {
+    padding-top: 12px;
+    color: rgb(156, 158, 166);
+    display: block;
+    text-align: center;
+}
+
+
+.display-mode {
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+ 
+.display-mode span {
+  display: inline-block;
+  height: 1px;
+  width: 1px;
+}
+ 
+@media only screen and (max-width: 712px) {
+  .display-mode .tablet,
+  .display-mode .tablet-landscape,
+  .display-mode .desktop {
+    display: none;
+  }
+}
+ 
+@media only screen and (min-width: 713px) and (max-width: 954px) {
+  .display-mode .mobile,
+  .display-mode .tablet-landscape,
+  .display-mode .desktop {
+    display: none;
+  }
+}
+ 
+@media only screen and (min-width: 955px) and (max-width: 1195px) {
+  .display-mode .mobile,
+  .display-mode .tablet,
+  .display-mode .desktop {
+    display: none;
+  }
+}
+ 
+@media (min-width: 1196px) {
+  .display-mode .mobile,
+  .display-mode .tablet,
+  .display-mode .tablet-landscape {
+    display: none;
+  }
+}

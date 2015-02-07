@@ -1,31 +1,67 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<div data-ng-app="BDEventsApp">
+    <div data-ng-controller="AppController">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">BDEvent24</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a ui-sref="home" class="active">Home</a></li>
+                        <li><a ui-sref="events">Events</a></li>
+                        <li>
+                            <form class="navbar-form navbar-right">
+                                <div class="input-group">
+                                    <input type="text" data-ng-model="SearchText" class="form-control" placeholder="Search for..">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button" data-ng-click="SearchProduct()">Go!</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
+
+                            <ul class="dropdown-menu">
+                                <li><a ui-sref="register">Register</a></li>
+                                <li><a ui-sref="login">Login</a></li>
+                            </ul>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <ui-view></ui-view>
     </div>
 </div>
+<div class="navbar navbar-fixed-bottom">
+    <div class="footer">
+        &copy; All Rights Reserved by BDEvents24
+    </div>
+</div>
+<script src="~/Scripts/jquery.min.js"></script>
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-ui.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular-ui-router.js"></script>
+<script src="~/Scripts/ui-bootstrap-tpls-0.12.0.min.js"></script>
+<script src="~/App/app.js"></script>
+<script src="~/App/Controllers/AppController.js"></script>
